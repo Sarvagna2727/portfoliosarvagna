@@ -19,15 +19,11 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon!",
     });
-
     setFormData({ name: "", email: "", subject: "", message: "" });
     setIsSubmitting(false);
   };
@@ -64,8 +60,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:sarvagnachowdary@gmail.com" className="text-foreground font-medium hover:text-primary transition-colors">
-                    sarvagnachowdary@gmail.com
+                  <a href="mailto:2300033295cseh1@gmail.com" className="text-foreground font-medium hover:text-primary transition-colors">
+                    2300033295cseh1@gmail.com
                   </a>
                 </div>
               </div>
@@ -88,7 +84,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-foreground font-medium">Guntur, India</p>
+                  <p className="text-foreground font-medium">Vaddeswaram, Andhra Pradesh, India</p>
                 </div>
               </div>
             </div>

@@ -38,9 +38,9 @@ const Hero = () => {
               Computer Science Student & Full Stack Developer
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-              Aspiring to leverage my skills in innovative projects that foster growth 
-              and deliver impactful results. Passionate about building user-friendly 
-              applications with modern technologies.
+              B.Tech CSE student at KL University with a 9.5 CGPA. Passionate about 
+              building full-stack applications, data science, and cloud technologies. 
+              Experienced in MERN stack, Spring Boot, and machine learning.
             </p>
 
             {/* Social Links */}
@@ -62,7 +62,7 @@ const Hero = () => {
                 <Github size={20} />
               </a>
               <a
-                href="mailto:sarvagnachowdary@gmail.com"
+                href="mailto:2300033295cseh1@gmail.com"
                 className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
               >
                 <Mail size={20} />

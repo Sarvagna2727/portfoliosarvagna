@@ -1,48 +1,73 @@
-import { Code, Database, Layout, Server, Users, Clock } from "lucide-react";
+import { Code, Database, Layout, Server, Cloud, Wrench, BookOpen, Users, Clock, Brain, MessageCircle, Lightbulb, Zap } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Programming Languages",
     icon: <Code size={24} />,
     skills: [
-      { name: "Python", level: 85 },
-      { name: "Java", level: 80 },
       { name: "C", level: 75 },
+      { name: "Java", level: 85 },
+      { name: "Python", level: 85 },
       { name: "JavaScript", level: 80 },
     ],
   },
   {
-    title: "Frontend Development",
+    title: "Web Development",
     icon: <Layout size={24} />,
     skills: [
       { name: "React.js", level: 85 },
       { name: "HTML/CSS", level: 90 },
-      { name: "Bootstrap", level: 80 },
-      { name: "Tailwind CSS", level: 75 },
+      { name: "Node.js", level: 80 },
+      { name: "Spring Boot", level: 75 },
+      { name: "Material-UI", level: 70 },
     ],
   },
   {
-    title: "Backend Development",
-    icon: <Server size={24} />,
+    title: "Data Science & ML",
+    icon: <Brain size={24} />,
     skills: [
-      { name: "Node.js", level: 80 },
-      { name: "Express.js", level: 78 },
+      { name: "Pandas / NumPy", level: 80 },
+      { name: "Scikit-learn", level: 75 },
+      { name: "Data Analysis", level: 80 },
+      { name: "Data Visualization", level: 75 },
     ],
   },
   {
     title: "Databases",
     icon: <Database size={24} />,
     skills: [
-      { name: "MongoDB", level: 80 },
+      { name: "PostgreSQL", level: 78 },
       { name: "MySQL", level: 75 },
+      { name: "MongoDB", level: 80 },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: <Cloud size={24} />,
+    skills: [
+      { name: "AWS", level: 70 },
+      { name: "Docker", level: 70 },
+      { name: "GitHub Actions", level: 75 },
+    ],
+  },
+  {
+    title: "Developer Tools",
+    icon: <Wrench size={24} />,
+    skills: [
+      { name: "GitHub", level: 85 },
+      { name: "VS Code", level: 90 },
+      { name: "JUnit", level: 70 },
     ],
   },
 ];
 
 const softSkills = [
-  { name: "Adaptability", icon: <Users size={20} /> },
-  { name: "Team Work", icon: <Users size={20} /> },
-  { name: "Time Management", icon: <Clock size={20} /> },
+  { name: "Problem Solving", icon: <Lightbulb size={20} /> },
+  { name: "Analytical Thinking", icon: <Brain size={20} /> },
+  { name: "Teamwork", icon: <Users size={20} /> },
+  { name: "Communication", icon: <MessageCircle size={20} /> },
+  { name: "Leadership", icon: <Zap size={20} /> },
+  { name: "Quick Learning", icon: <Clock size={20} /> },
 ];
 
 const Skills = () => {
@@ -57,7 +82,7 @@ const Skills = () => {
         </div>
 
         {/* Technical Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
@@ -68,7 +93,7 @@ const Skills = () => {
                 <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                   {category.icon}
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground">
+                <h3 className="font-display text-lg font-semibold text-foreground">
                   {category.title}
                 </h3>
               </div>
@@ -76,8 +101,8 @@ const Skills = () => {
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-foreground font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground text-sm">{skill.level}%</span>
+                      <span className="text-foreground font-medium text-sm">{skill.name}</span>
+                      <span className="text-muted-foreground text-xs">{skill.level}%</span>
                     </div>
                     <div className="h-2 bg-muted rounded-full overflow-hidden">
                       <div
