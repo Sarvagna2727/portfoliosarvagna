@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin, Award, Calendar } from "lucide-react";
+import { GraduationCap, MapPin, Award, Calendar, Briefcase } from "lucide-react";
 
 const About = () => {
   return (
@@ -11,8 +11,8 @@ const About = () => {
           <div className="w-20 h-1 bg-accent mx-auto" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Education & Details */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left Side - Education & Experience */}
           <div className="space-y-6">
             <div className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
@@ -27,23 +27,54 @@ const About = () => {
                     B.Tech in Computer Science & Engineering
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    Koneru Lakshmaiah Education Foundation
+                    Koneru Lakshmaiah University, Vaddeswaram, Andhra Pradesh
                   </p>
                   <div className="flex items-center gap-4 mt-2 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Calendar size={14} />
-                      2023 - 2027
+                      Aug 2023 – May 2027
                     </span>
                     <span className="flex items-center gap-1">
                       <MapPin size={14} />
-                      Guntur, India
+                      Vaddeswaram, AP
                     </span>
                   </div>
                   <div className="mt-3">
                     <span className="px-3 py-1 bg-accent/20 text-accent-foreground text-sm font-semibold rounded-full">
-                      CGPA: 9.56
+                      CGPA: 9.5
                     </span>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Experience */}
+            <div className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Briefcase className="text-accent" size={24} />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                    Experience
+                  </h3>
+                  <p className="text-primary font-medium">
+                    Data Science Virtual Intern
+                  </p>
+                  <p className="text-muted-foreground text-sm">
+                    AICTE – EduSkills (Supported by Altair)
+                  </p>
+                  <div className="flex items-center gap-4 mt-2 text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1">
+                      <Calendar size={14} />
+                      April 2025 – June 2025
+                    </span>
+                  </div>
+                  <ul className="mt-3 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                    <li>Completed 10-week virtual internship on Data Science</li>
+                    <li>Hands-on experience in data analysis & machine learning</li>
+                    <li>Data preprocessing, model building, and evaluation</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -58,10 +89,10 @@ const About = () => {
               </div>
               <div className="grid gap-3">
                 {[
-                  { name: "Oracle Cloud Infrastructure 2025 Generative AI Professional", issuer: "Oracle" },
-                  { name: "Multicloud Network Associate", issuer: "Aviatrix" },
-                  { name: "Scrum Fundamental Certified", issuer: "Scrum" },
-                  { name: "Java (Basic)", issuer: "HackerRank" },
+                  { name: "Scrum Fundamentals Certified (SFC)", issuer: "SCRUMstudy, Sep 2025" },
+                  { name: "Oracle Certified Professional", issuer: "Oracle, 2025" },
+                  { name: "Aviatrix Certified Engineer", issuer: "Aviatrix, 2025" },
+                  { name: "Automation Anywhere Certified RPA Professional", issuer: "2026" },
                 ].map((cert, index) => (
                   <div key={index} className="flex items-center gap-3 p-3 bg-muted/50 rounded-lg">
                     <div className="w-2 h-2 rounded-full bg-accent" />
@@ -75,7 +106,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Side - Coursework & Volunteer */}
+          {/* Right Side - Coursework & Coding Platforms */}
           <div className="space-y-6">
             <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
               <h3 className="font-display text-xl font-semibold text-foreground mb-4">
@@ -83,12 +114,9 @@ const About = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Data Structures & Algorithms",
                   "Operating Systems",
-                  "Database Management",
-                  "Network Protocols & Security",
-                  "Object-Oriented Programming",
-                  "Web Development",
+                  "Data Structures & Algorithms",
+                  "Database Management Systems",
                 ].map((course) => (
                   <span
                     key={course}
@@ -102,23 +130,24 @@ const About = () => {
 
             <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
               <h3 className="font-display text-xl font-semibold text-foreground mb-4">
-                Volunteer Experience
+                Coding Platforms
               </h3>
-              <div className="space-y-4">
-                <div className="border-l-2 border-accent pl-4">
-                  <h4 className="font-semibold text-foreground">The Blockchain Hub</h4>
-                  <p className="text-primary text-sm font-medium">Technical Core Member</p>
-                  <p className="text-muted-foreground text-sm mt-1">
-                    Actively participated in various blockchain projects and technical initiatives.
-                  </p>
-                </div>
-                <div className="border-l-2 border-accent pl-4">
-                  <h4 className="font-semibold text-foreground">Food Sanitation Initiative</h4>
-                  <p className="text-primary text-sm font-medium">Social Internship</p>
-                  <p className="text-muted-foreground text-sm mt-1">
-                    Conducted surveys and awareness sessions on food hygiene for street vendors.
-                  </p>
-                </div>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { name: "LeetCode", url: "https://leetcode.com" },
+                  { name: "HackerRank", url: "https://hackerrank.com" },
+                  { name: "CodeChef", url: "https://codechef.com" },
+                ].map((platform) => (
+                  <a
+                    key={platform.name}
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-3 bg-accent/20 text-foreground font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-all"
+                  >
+                    {platform.name}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

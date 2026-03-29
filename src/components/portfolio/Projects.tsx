@@ -4,30 +4,27 @@ const projects = [
   {
     title: "Library Management System",
     description:
-      "A comprehensive Online consultation platform utilizing the MERN Stack. Features include real-time consultations, appointment booking, video calls, and payment integration.",
+      "A comprehensive online consultation platform using the MERN stack. Features real-time consultations between users and professionals, appointment booking, video calls, and payment integration.",
     technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
-    image: null,
     github: "#",
     live: "#",
     featured: true,
   },
   {
-    title: "Blockchain Projects",
+    title: "Hospital Management System",
     description:
-      "Actively participated in various blockchain projects as a Technical Core Member at The Blockchain Hub, contributing to decentralized applications and smart contracts.",
-    technologies: ["Blockchain", "Web3", "Smart Contracts"],
-    image: null,
+      "A full-stack hospital appointment management platform. Developed REST APIs using Spring Boot with a responsive React frontend. Implemented role-based access and containerized deployment using Docker.",
+    technologies: ["Spring Boot", "React.js", "Docker", "REST API"],
     github: "#",
     live: "#",
-    featured: false,
+    featured: true,
   },
   {
-    title: "Food Sanitation Awareness",
+    title: "Fraud Detection Application",
     description:
-      "Conducted surveys and awareness sessions on food hygiene and sanitation for street vendors as part of a social internship initiative.",
-    technologies: ["Research", "Data Analysis", "Community Outreach"],
-    image: null,
-    github: null,
+      "A machine learning-based fraud detection system to identify suspicious transactions. Built predictive models using Python with Scikit-learn and Pandas. Achieved high accuracy using classification algorithms with data preprocessing and feature engineering.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
+    github: "#",
     live: null,
     featured: false,
   },
@@ -48,18 +45,16 @@ const Projects = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.title}
               className={`bg-card rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all group ${
-                project.featured ? "lg:col-span-2" : ""
+                project.featured ? "lg:col-span-1" : "lg:col-span-2"
               }`}
             >
               {/* Project Image Placeholder */}
-              <div className={`bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center ${
-                project.featured ? "h-64" : "h-48"
-              }`}>
-                <Folder className="text-primary/40 group-hover:text-accent transition-colors" size={project.featured ? 80 : 60} />
+              <div className="bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center h-48">
+                <Folder className="text-primary/40 group-hover:text-accent transition-colors" size={60} />
               </div>
 
               <div className="p-6">
